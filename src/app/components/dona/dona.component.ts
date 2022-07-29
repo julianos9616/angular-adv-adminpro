@@ -12,14 +12,9 @@ export class DonaComponent{
 
 
   @Input() titulo: string = "Sin titulo";
-  @Input() stringLabels: string = '';
-  @Input() dataGrafic: any = [];
-
-  labelsString: string = 'Download Sales,In-Store Sales,Mail-Order Sales';
-  labelsDonut = this.labelsString.split(',')
-  // labelsDonut = this.stringLabels.split(" ");
+ 
   
-  public doughnutChartLabels: string[] = [ 'sin valor','sin valor','sin valor' ];
+  @Input() doughnutChartLabels: string[] = [ 'sin valor','sin valor','sin valor' ];
   @Input() doughnutChartData: ChartData<'doughnut'> = {
     labels: this.doughnutChartLabels,
     datasets: [
@@ -28,9 +23,5 @@ export class DonaComponent{
   };
   public doughnutChartType: ChartType = 'doughnut'; 
 
-  datos(){
-    console.log(this.stringLabels);
-    console.log(this.labelsDonut);
-  }
 
 }
